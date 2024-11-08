@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import HelloWord from './componet/HelloWord'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const name = 'Carine'
+const newName = name.toUpperCase()
+
+function sum(a, b) {
+  return a + b
 }
 
-export default App;
+  const url = "https://via.placeholder.com/150"
+
+
+  return (
+    <div className="App">
+      <h2>Alternado JSX</h2>
+      <p>Olá {name} </p>
+      <p>Olá {newName}</p>
+      <p>Minha idade: {sum(15, 15)}</p>
+      <img src={url} alt="minha imagem"/>
+      <HelloWord/>
+    </div>
+  )
+}
+
+export {App}
